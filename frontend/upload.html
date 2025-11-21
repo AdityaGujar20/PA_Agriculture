@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Data - AgriPredict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Home</a>
+    <a href="upload.html" class="active">Upload Data</a>
+    <a href="eda.html">EDA</a>
+    <a href="preprocess.html">Preprocess</a>
+    <a href="train.html">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html">Optimize Inputs</a>
+    <a href="shap.html">SHAP Dashboard</a> <!-- Added -->
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Upload Dataset</h1>
+    </div>
+
+    <div class="content">
+
+        <h2>Select a CSV file to upload</h2>
+
+        <div class="upload-box">
+            <input type="file" id="fileInput" accept=".csv">
+        </div>
+
+        <button class="btn" onclick="uploadFile()">Upload</button>
+
+        <p id="uploadStatus" class="status"></p>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

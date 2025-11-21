@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDA - AgriPredict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Data</a>
+    <a href="eda.html" class="active">EDA</a>
+    <a href="preprocess.html">Preprocess</a>
+    <a href="train.html">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html">Optimize Inputs</a>
+    <a href="shap.html">SHAP Dashboard</a> <!-- Added -->
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Exploratory Data Analysis</h1>
+    </div>
+
+    <div class="content">
+
+        <button class="btn" onclick="loadEDASummary()">Load Summary</button>
+        <button class="btn" onclick="loadEDAPlots()">Load Plots</button>
+
+        <h2>Dataset Summary</h2>
+        <pre id="summaryBox" class="summary-box">Click "Load Summary" to view details...</pre>
+
+        <h2>Visualizations</h2>
+        <div id="plotsContainer" class="plots"></div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optimize Inputs - AgriPredict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Data</a>
+    <a href="eda.html">EDA</a>
+    <a href="preprocess.html">Preprocess</a>
+    <a href="train.html">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html" class="active">Optimize Inputs</a>
+    <a href="shap.html">SHAP Dashboard</a> <!-- Added -->
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Optimize Farming Inputs</h1>
+    </div>
+
+    <div class="content">
+
+        <h2>Provide Base Input Features</h2>
+
+        <p>⚠️ Do NOT enter fertilizer, irrigation, or pesticide.  
+           The optimizer will calculate those.</p>
+
+        <div class="form-grid">
+
+            <input class="input-box" id="soil_pH" placeholder="Soil pH">
+            <input class="input-box" id="soil_N" placeholder="Soil N">
+            <input class="input-box" id="soil_P" placeholder="Soil P">
+            <input class="input-box" id="rainfall_mm" placeholder="Rainfall (mm)">
+            <input class="input-box" id="temp_avg" placeholder="Avg Temperature">
+
+            <input class="input-box" id="month" placeholder="Month (1-12)">
+            <input class="input-box" id="day_of_year" placeholder="Day of Year">
+            <input class="input-box" id="year" placeholder="Year">
+
+            <input class="input-box" id="crop_type" placeholder="Crop Type (Wheat, Rice, etc.)">
+        </div>
+
+        <br>
+
+        <button class="btn" onclick="optimizeInputs()">Optimize</button>
+
+        <h2>Optimization Result</h2>
+
+        <pre id="optimizeResult" class="summary-box">
+Click "Optimize" to calculate best inputs...
+        </pre>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

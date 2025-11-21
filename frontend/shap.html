@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHAP Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="upload.html">Upload Data</a>
+    <a href="eda.html">EDA</a>
+    <a href="preprocess.html">Preprocess</a>
+    <a href="train.html">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html">Optimize Inputs</a>
+    <a class="active" href="shap.html">SHAP Dashboard</a>
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Model Explainability — SHAP Dashboard</h1>
+    </div>
+
+    <section>
+        <h2>SHAP Summary Plot</h2>
+        <button class="btn" onclick="loadSummary()">Load Summary Plot</button>
+        <img id="summary-img" class="plot-img">
+    </section>
+
+    <section>
+        <h2>Feature Importance (Bar Plot)</h2>
+        <button class="btn" onclick="loadBar()">Load Bar Plot</button>
+        <img id="bar-img" class="plot-img">
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

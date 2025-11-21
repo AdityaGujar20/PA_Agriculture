@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preprocess - AgriPredict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Data</a>
+    <a href="eda.html">EDA</a>
+    <a href="preprocess.html" class="active">Preprocess</a>
+    <a href="train.html">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html">Optimize Inputs</a>
+    <a href="shap.html">SHAP Dashboard</a> <!-- Added -->
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Preprocess Dataset</h1>
+    </div>
+
+    <div class="content">
+
+        <h2>Select Missing Value Strategy</h2>
+
+        <select id="strategySelect" class="dropdown">
+            <option value="mean">Mean</option>
+            <option value="median">Median</option>
+            <option value="mode">Mode</option>
+        </select>
+
+        <br><br>
+
+        <button class="btn" onclick="runPreprocess()">Run Preprocessing</button>
+
+        <p id="preprocessStatus" class="status"></p>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

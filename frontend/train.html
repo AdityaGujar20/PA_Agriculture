@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Model - AgriPredict</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>AgriPredict</h2>
+    <a href="index.html">Home</a>
+    <a href="upload.html">Upload Data</a>
+    <a href="eda.html">EDA</a>
+    <a href="preprocess.html">Preprocess</a>
+    <a href="train.html" class="active">Train Model</a>
+    <a href="predict.html">Predict Yield</a>
+    <a href="optimize.html">Optimize Inputs</a>
+    <a href="shap.html">SHAP Dashboard</a> <!-- Added -->
+</div>
+
+<div class="main">
+    <div class="topbar">
+        <h1>Train Machine Learning Model</h1>
+    </div>
+
+    <div class="content">
+
+        <h2>Training Configuration</h2>
+
+        <label>Target Column (default: yield_kg_per_ha)</label><br>
+        <input id="targetInput" class="input-box" value="yield_kg_per_ha">
+
+        <br><br>
+
+        <label>Test Size (0.1 - 0.4 recommended)</label><br>
+        <input id="testSizeInput" class="input-box" value="0.2">
+
+        <br><br>
+
+        <button class="btn" onclick="trainModel()">Train Model</button>
+
+        <p id="trainStatus" class="status"></p>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
